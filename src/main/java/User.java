@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -124,7 +125,7 @@ public class User {
             System.out.println(e);
         }
         if (result != 0)
-            return "index.xhtml?faces-redirect=true";
+            return "home.xhtml?faces-redirect=true";
         else return "create.xhtml?faces-redirect=true";
     }
 
@@ -171,7 +172,7 @@ public class User {
         } catch (Exception e) {
             System.out.println();
         }
-        return "/index.xhtml?faces-redirect=true";
+        return "/home.xhtml?faces-redirect=true";
     }
 
     // Used to delete user record
@@ -191,4 +192,5 @@ public class User {
             return "Male";
         } else return "Female";
     }
+
 }  
